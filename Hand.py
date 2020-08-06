@@ -4,15 +4,13 @@ from typing import List
 
 class Hand:
 
-    def __init__(self, cards):
+    def __init__(self, cards=[]):
 
         if isinstance(cards, List):
             self.__cards: List[Card] = cards
         elif isinstance(cards, Card):
             self.__cards = [cards]
-        else:
-            raise TypeError(" 'Cards' is not type List nor Card")
-
+            
         self.__aces = 0
         self.__pts = 0
         self.__busted = False
