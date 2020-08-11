@@ -3,13 +3,14 @@ import valid_data
 
 
 class Player:
-    action = ('SURRENDER', 'STAND', 'HIT', 'DOUBLE DOWN', 'SPLIT')
+    action = ('STAND', 'HIT', 'DOUBLE DOWN', 'SPLIT')
 
     def __init__(self, *args):
         name, cash = args
 
         self.__name = name
         self.__hands = []  # List[Hand]
+        self.__cmd = list(Player.action)
 
         self.__cash = cash
         self.__bet = 0
