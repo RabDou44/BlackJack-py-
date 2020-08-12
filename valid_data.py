@@ -1,4 +1,4 @@
-def int_input(in_str, upper=8, lower=0):
+def int_input(in_str, upper=8, lower=1):
     num = 0
     while True:
         try:
@@ -8,7 +8,7 @@ def int_input(in_str, upper=8, lower=0):
         except TypeError:
             continue
         else:
-            if lower <= num <= upper:
+            if lower <= num:
                 break
             print("Must choose between ", lower, "and", upper, ":")
     return num
@@ -26,7 +26,7 @@ def float_input(in_str, upper=10000., lower=0.):
         else:
             if lower <= num <= upper:
                 break
-            print("Choose value between", lower, upper, "You typed",num)
+            print("Choose value between", lower, upper, "You typed", num)
     return num
 
 
