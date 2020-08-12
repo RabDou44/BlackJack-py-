@@ -66,8 +66,6 @@ class Player:
             if index > 0:
                 str_index += ':' + str(index)
 
-            print(hand.is_busted(), len(hand))
-
             while not hand.is_busted() and 'y' == valid_data.yn_input(str_index):
                 self.__hands[index].push_card(deck.draw_card())
                 hand = self.__hands[index]
